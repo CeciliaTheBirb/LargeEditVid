@@ -1,0 +1,23 @@
+python edit.py \
+    --task t2v-14B \
+    --size 832*480 \
+    --base_seed 42 \
+    --ckpt_dir /xuqianxun/Wan2.1-T2V-1.3B \
+    --sample_solver unipc \
+    --source_video_path /xuqianxun/try_models/Wan2.1/t2v-14B_1280*720_1_1_A_girl_is_jumping_swiftly_into_the_pool_on_a_Olymp_20250706_092846.mp4 \
+    --source_prompt "A girl is jumping swiftly into the pool." \
+    --source_words "girl" \
+    --prompt "A robot is jumping swiftly into the pool." \
+    --target_words "robot" \
+    --sample_guide_scale 3.5 \
+    --tar_guide_scale 10.5 \
+    --sample_shift 12 \
+    --sample_steps 50 \
+    --n_max 40 \
+    --n_min 0 \
+    --n_avg 4 \
+    --worse_avg 2 \
+    --omega 2.75 \
+    --window_size 11 \
+    --decay_factor 0.1 \
+    --frame_num 41 \
