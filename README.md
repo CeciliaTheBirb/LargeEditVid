@@ -2,13 +2,12 @@
 
 This repository extends [Flow Director](https://github.com/Westlake-AGI-Lab/FlowDirector) with a **simple yet effective fix** of the noise schedule. This method addresses a key limitation in current video editing pipelines — **flickering and unstable reconstruction when performing edits with large object size changes**, such as replacing a large animal with a small human.
 
----
 
-## 🧠 Motivation
+## Motivation
 
 Current video editing methods focus on editing with subjects similar to the original subject in size and motion style. However, no work is done to explicitly address editing in scenarios where large modifications are needed, or edits involving large spatial and structural changes. We observed that the standard Flow Director **introduces flickering in newly revealed backgrounds and incomplete editing** under large subject edits.
 
-### ✨ Our Contribution
+### Our Contribution
 
 We propose **fixing the added noise during the last _k_ denoising steps**. This small change leads to:
 
@@ -16,15 +15,14 @@ We propose **fixing the added noise during the last _k_ denoising steps**. This 
 - Complete editing that successfully erases the original subject
 - A noticeable reduction in flickering and distortion  
 
----
 
-## 🎥 Comparison Examples
+## Comparison Examples
 
 ### 🐺 Example 1: Grey Wolf → Boy
 
 | Original Input | Vanilla Flow Director | Fixed Late Noise |
 |----------------|------------------------|---------------------------|
-| ![wolf_original](assests/wolf_ori.gif) | ![wolf_vanilla](assests/wolf_bad.gif) | ![wolf_fixed](assests/wolf.gif) |
+| ![wolf_original](assets/wolf_ori.gif) | ![wolf_vanilla](assets/wolf_bad.gif) | ![wolf_fixed](assets/wolf.gif) |
 
 ### 🐉 Example 2: Dog → Boy
 
