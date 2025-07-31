@@ -18,13 +18,19 @@ We propose **fixing the added noise during the last _k_ denoising steps**. This 
 
 ## Comparison Examples
 
+Sorry for low resolution due to video conversion process to gifs :(
+
 ### Example 1: Grey Wolf → Boy
+
+Fixed incomplete editing of wolf body.
 
 | Original Input | Vanilla Flow Director | Fixed Late Noise |
 |----------------|------------------------|---------------------------|
 | ![wolf_original](assets/wolf_ori.gif) | ![wolf_vanilla](assets/wolf_bad.gif) | ![wolf_fixed](assets/wolf.gif) |
 
 ### Example 2: Dog → Boy
+
+Fixed incomplete editing of dog body (surrounding girl's lap), and dog tail.
 
 | Original Input | Vanilla Flow Director | Fixed Late Noise |
 |----------------|------------------------|---------------------------|
@@ -33,6 +39,8 @@ We propose **fixing the added noise during the last _k_ denoising steps**. This 
 We noticed the issue of the girl (left) dog (right) was edited into boy (left) girl (right). This could be due to the diffusion model’s attention maps failing to maintain consistent spatial-role associations in multi-subject scenarios.
 
 ### Example 3: Woman → Bear
+
+Fixed flickering in newly revealed backgrounds due to difference in size.
 
 | Original Input | Vanilla Flow Director | Fixed Late Noise |
 |----------------|------------------------|---------------------------|
